@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sample.app</groupId>
-    <artifactId>Test-Contacts-Repo</artifactId>
+    <artifactId>JavaPro.Lesson3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
