@@ -1,4 +1,4 @@
-package main.Java;
+package ua.ithillel.lesson3;
 
 import java.util.Scanner;
 import java.lang.String;
@@ -9,15 +9,15 @@ public class Reverse {
 
     public static void main(String[] args) {
 
-        stringReverse();
-
-    }
-   public static void stringReverse() {
-
         scanner = new Scanner(System.in);
         System.out.println("Print a word: ");
-        String str = scanner.next();
-        String result = String.valueOf(new StringBuilder(str).reverse());
-        System.out.println(result);
+        String input = scanner.next();
+        System.out.println(stringReverse(input));
+    }
+   public static String stringReverse(String input) {
+
+
+        return new StringBuilder(input).reverse().toString();
+
    }
 }

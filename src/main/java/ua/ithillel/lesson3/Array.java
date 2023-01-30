@@ -1,4 +1,4 @@
-package main.Java;
+package ua.ithillel.lesson3;
 
 import java.lang.String;
 import java.util.Random;
@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Array {
 
-   static Scanner scanner;
-   static Random random;
-   static String randomWord;
+    static Scanner scanner;
+    static Random random;
+    static String randomWord;
 
     public static void main(String[] args) {
 
@@ -24,17 +24,23 @@ public class Array {
         System.out.println("Guess a word: ");
         String word = scanner.next().toLowerCase();
 
-        int hintCharacter = 2;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("###############");
+
         while (!randomWord.equals(word)) {
-            StringBuilder stringBuilder = new StringBuilder(randomWord.substring(0,hintCharacter));
-            System.out.println(stringBuilder.append("###############"));
+           checkChars(word, randomWord, stringBuilder);
+            System.out.println(stringBuilder);
             System.out.println("Try again! ");
             word = scanner.next().toLowerCase();
-            if (hintCharacter + 2 <= randomWord.length()) {
-                hintCharacter += 2;
+        }
+        System.out.println("Correct! You won!!!");
+    }
+
+    public static void checkChars(String word, String answer, StringBuilder tablo) {
+        for(int i = 0; i < answer.length() && i < word.length(); i++) {
+            if(word.charAt(i) == answer.charAt(i)) {
+                tablo.setCharAt(i, word.charAt(i));
             }
         }
-
-        System.out.println("Correct! You won!!!");
     }
 }
