@@ -13,7 +13,7 @@ class PalindromeTest {
     }
 
     @Test
-    void shouldIsNotPalindrome () {
+    void shouldIsNotPalindrome() {
         assertFalse(Palindrome.isPalindrome("lotus"));
     }
 

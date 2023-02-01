@@ -6,14 +6,14 @@ public class Palindrome {
 
     public static void main(String[] args) {
 
-        System.out.println(isPalindrome("radar"));
+        System.out.println(isPalindrome("razor"));
     }
 
     public static boolean isPalindrome(String input) {
 
-        int i = input.length() - 1;
-        int j = 0;
-
-        return input.charAt(i) == input.charAt(j);
+       StringBuilder str = new StringBuilder(input);
+       str.reverse();
+       String data = str.toString();
+        return input.equals(data);
     }
 }

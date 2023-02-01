@@ -28,7 +28,7 @@ public class Array {
         stringBuilder.append("###############");
 
         while (!randomWord.equals(word)) {
-           checkChars(word, randomWord, stringBuilder);
+            checkChars(word, randomWord, stringBuilder);
             System.out.println(stringBuilder);
             System.out.println("Try again! ");
             word = scanner.next().toLowerCase();
@@ -37,6 +37,7 @@ public class Array {
     }
 
     public static void checkChars(String word, String answer, StringBuilder tablo) {
+
         for(int i = 0; i < answer.length() && i < word.length(); i++) {
             if(word.charAt(i) == answer.charAt(i)) {
                 tablo.setCharAt(i, word.charAt(i));
